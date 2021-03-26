@@ -77,6 +77,7 @@
             <el-col :span="4">
               <el-select v-model="value1" 
                   @change="gamechange"
+                  clearable 
                placeholder="请选择游戏">
                 <el-option
                   v-for="item in options1"
@@ -89,20 +90,21 @@
             </el-col>
             <el-col :span="4">
               <el-select v-model="value2" 
-                  @change="change2()"
+                  @change="change2"
               placeholder="请选择游戏区">
                 <el-option
                   v-for="item in options2"
                   :key="item.value"
                   :label="item.label"
                   :value="item.value"
-                  @change="change2()"
                 >
                 </el-option>
               </el-select>
             </el-col>
             <el-col :span="4">
-              <el-select v-model="value3" placeholder="请选择游戏服">
+              <el-select v-model="value3" 
+                  @change="change3"
+              placeholder="请选择游戏服">
                 <el-option
                   v-for="item in options3"
                   :key="item.value"
@@ -229,6 +231,10 @@ export default {
         "#67B3FC",
       ],
       options1: [
+        {
+                    value: "0",
+          label: "选择游戏",
+        },
         {
           value: "1",
           label: "穿越火线",
@@ -416,6 +422,8 @@ export default {
         this.infolist=this.legend
       }else if(this.value1 === '1'){
         this.infolist=this.cf
+      }else if(this.value1 === '0'){
+        this.infolist=[]
       }
     },
     change2() {
