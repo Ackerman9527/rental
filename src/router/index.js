@@ -12,6 +12,17 @@ const routes = [
   {
     path: '/home',
     component: Home,
+    redirect: '/home/index',
+    children: [
+      {
+        path: 'detail',
+        component: () => import('../views/detail/goodsDetail.vue')
+      },
+      {
+        path: 'index',
+        component: () => import('../views/detail/index.vue')
+      }
+    ]
   },
   // ,
   // {

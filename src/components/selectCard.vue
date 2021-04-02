@@ -6,6 +6,7 @@
     <div class="cardtext">
       {{ name }}
     </div>
+  
   </div>
 </template>
 <script>
@@ -35,7 +36,10 @@ export default {
 .card {
   width: 120px;
   height: 100px;
-
+   .tooltips {
+     width: 100%;
+     height: 100%;
+   }
   .cardbody {
     width: 120px;
     height: 60px;
