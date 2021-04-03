@@ -2,7 +2,7 @@
   <div class="home">
     <!-- 首页 -->
     <div class="title">
-      <div class="title-left">你好，欢迎访问田文轩租号平台！</div>
+      <div class="title-left">你好，欢迎访问田文轩123租号平台！</div>
       <div class="title-right">
         你好，请 <span style="color: red;  "  @click="login()">登录</span> <span>注册</span>
       </div>
